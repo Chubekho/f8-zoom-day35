@@ -1,0 +1,36 @@
+.wrapper {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.primary {
+    background: rgb(219, 29, 219);
+    color: #fff;
+}
+
+.rounded {
+    border-radius: 999px;
+}
+
+.bordered {
+    color: #a423a4;
+    border-color: currentColor;
+}
+
+//Sizes
+.small {
+    padding: 2px 12px;
+    font-size: 1.4rem;
+}
+
+.medium {
+    padding: 4px 16px;
+}
+
+.large {
+    padding: 6px 20px;
+    font-size: 1.8rem;
+}
