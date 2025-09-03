@@ -1,0 +1,55 @@
+.app {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-todo {
+    width: 500px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #414141;
+    border-radius: 4px;
+}
+
+.task-wrapper {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #cacaca;
+}
+
+.task-item--first {
+    display: flex;
+}
+
+.task-item.completed {
+    opacity: .55;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.task-item__text {
+    margin-left: 10px;
+}
+
+.task-item--control {
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+}
+
+.btn--align-center {
+    display: flex;
+    align-items: center;
+}
+
