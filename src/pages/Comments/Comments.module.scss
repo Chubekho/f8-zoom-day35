@@ -1,0 +1,131 @@
+/* Wrapper */
+.app {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Loading */
+.loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: #1F2225;
+    border: 2px solid;
+    position: relative;
+}
+.loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 .9s normal infinite;
+}
+@keyframes l6 {
+    100% { inset: 0 }
+}
+
+/* Form */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 600px;
+}
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.comment-form input:focus,
+.comment-form textarea:focus {
+    border-color: #1f78ff;
+}
+.comment-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.comment-form button {
+    align-self: flex-end;
+    padding: 8px 16px;
+    background: #9c9c9c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.comment-form button:hover {
+    background: #5b5d5f;
+}
+
+/* Comments wrapper */
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Single comment */
+.comment {
+    display: flex;
+    gap: 14px;
+    padding: 14px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+/* Avatar */
+.comment__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Body */
+.comment__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Header */
+.comment__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.comment__author {
+    font-weight: 600;
+    font-size: 15px;
+}
+.comment__email {
+    font-size: 13px;
+    color: #666;
+}
+.comment__time {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Text */
+.comment__text {
+    font-size: 14px;
+    line-height: 1.5;
+}

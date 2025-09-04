@@ -9,7 +9,7 @@ function Todo() {
     const [inputValue, setInputValue] = useState('');
     const [todos, setTodos] = useState([]);
     const [edited, setEdited] = useState(false);
-    const [editId, setEditId] = useState()
+    const [editId, setEditId] = useState();
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value); // Lấy giá trị từ input
