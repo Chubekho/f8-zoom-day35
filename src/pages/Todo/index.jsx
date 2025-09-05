@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "./Todo.module.scss"
-import Button from "../Buttons";
+import Button from "../../components/Button";
 
 let uniqId = -1;
 

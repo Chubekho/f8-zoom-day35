@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import styles from "./Products.module.scss"
-import Button from "../Buttons";
+import Button from "../../components/Button";
 
 function Modal({ product, onClose }) {
     if (!product) return null

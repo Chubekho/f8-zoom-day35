@@ -1,0 +1,80 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #ccc;
+    font-weight: 600;
+    text-decoration: none;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.wrapper:hover {
+    background: #ddd;
+}
+
+//variant
+.primary {
+    background: rgb(35, 202, 35);
+    color: #fff;
+}
+
+.primary:hover {
+    background: rgb(74, 219, 74);
+    color: #fff;
+}
+
+.rounded {
+    border-radius: 999px;
+}
+
+.bordered {
+    color: #a423a4;
+    border-color: currentColor;
+}
+
+.disabled {
+    cursor: not-allowed;
+    ;
+    opacity: 0.5;
+
+}
+
+//Sizes
+.small {
+    padding: 4px 12px;
+    font-size: 1.4rem;
+}
+
+.medium {
+    padding: 6px 16px;
+    min-height: 36px;
+}
+
+.large {
+    padding: 6px 20px;
+    font-size: 2rem;
+}
+
+//loading button
+.loading {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #3a3a3a;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

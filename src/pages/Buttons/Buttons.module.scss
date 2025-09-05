@@ -1,38 +1,56 @@
+.app {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper {
+    width: 60%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+.buttons-wrapper {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.buttons-wrapper--desc {
+    padding: 0 8px;
+}
+
+.my-custom-class {
+    background: #2650da;
+    padding: 12px 20px;
+    font-size: 3rem;
+    font-style: italic;
+    font-family: fantasy;
+}
+
+
+.loading {
+    width: 20px;
+    height: 20px;
+    border: 5px solid #000;
+    border-bottom-color: transparent;
+    border-radius: 50%;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-weight: 600;
-    text-decoration: none;
-    min-width: 100px;
-    cursor: pointer;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
 }
 
-.primary {
-    background: rgb(219, 29, 219);
-    color: #fff;
-}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
 
-.rounded {
-    border-radius: 999px;
-}
-
-.bordered {
-    color: #a423a4;
-    border-color: currentColor;
-}
-
-//Sizes
-.small {
-    padding: 2px 12px;
-    font-size: 1.4rem;
-}
-
-.medium {
-    padding: 4px 16px;
-}
-
-.large {
-    padding: 6px 20px;
-    font-size: 1.8rem;
+    100% {
+        transform: rotate(360deg);
+    }
 }

@@ -52,7 +52,7 @@ function Weather() {
     return (
         <div className={styles.app}>
             <h2>Thông tin thời tiết</h2>
-            <select value={selectedCity} onChange={handleChange}>
+            <select style={{ border: "1px solid #a19999ff" }} value={selectedCity} onChange={handleChange}>
                 <option value="hanoi">Hà Nội</option>
                 <option value="hcm">TP.HCM</option>
                 <option value="danang">Đà Nẵng</option>
@@ -74,7 +74,7 @@ function Weather() {
                 </p>
             </div>
 
-            <button onClick={handleRefresh}>Làm mới</button>
+            <button className={styles.btn} onClick={handleRefresh}>Làm mới</button>
         </div>
     );
 }

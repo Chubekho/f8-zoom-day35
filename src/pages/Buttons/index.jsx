@@ -1,46 +1,71 @@
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
+import Button from "../../components/Button";
+import styles from "./Buttons.module.scss"
 
-import styles from "./Buttons.module.scss";
-
-function Button({
-    primary = false,
-    rounded = false,
-    bordered = false,
-    children,
-    className,
-    href,
-    size = "medium",
-    ...passProps
-}) {
-    const Component = href ? "a" : "button";
-
-    const classNames = clsx(className, styles.wrapper, styles[size], {
-        [styles.primary]: primary,
-        [styles.rounded]: rounded,
-        [styles.bordered]: bordered,
-    })
-
+function ButtonsWrapper({ name, children }) {
     return (
-        <Component
-            {...passProps}
-            href={href}
-            className={clsx(classNames)}
-        >
-            {children}
-        </Component>
+        <fieldset className={styles['wrapper']}>
+            <legend className={styles['buttons-wrapper--desc']}>{name}</legend>
+            <div className={styles['buttons-wrapper']}>
+                {children}
+            </div>
+        </fieldset>
     )
 }
 
-Button.propTypes = {
-    title: PropTypes.string,
-    children: PropTypes.string.isRequired,
-    primary: PropTypes.bool,
-    rounded: PropTypes.bool,
-    bordered: PropTypes.bool,
-    href: PropTypes.string,
-    size: PropTypes.string,
-    className: PropTypes.string,
+
+function Buttons() {
+    return (
+        <div className={styles.app}>
+            <ButtonsWrapper name='Basic Button'>
+                <Button>Click me</Button>
+            </ButtonsWrapper>
+
+            <ButtonsWrapper name='Primary Button'>
+                <Button primary>Click me</Button>
+            </ButtonsWrapper>
+
+            <ButtonsWrapper name='Link Button'>
+                <Button href="https://google.com" target="_blank">Go to Google</Button>
+            </ButtonsWrapper>
+
+            <ButtonsWrapper name='Button với Size'>
+                <Button size="small">Small</Button>
+                <Button size="medium">Medium</Button>
+                <Button size="large">Largeeee</Button>
+            </ButtonsWrapper>
+
+            <ButtonsWrapper name='Button với onClick'>
+                <Button onClick={() => alert('Clicked!')}>
+                    Click Alert
+                </Button>
+            </ButtonsWrapper>
+
+            <ButtonsWrapper name='Disabled Button'>
+                <Button disabled onClick={() => alert('Should not show')}>
+                    Disabled Button
+                </Button>
+            </ButtonsWrapper>
+
+            <ButtonsWrapper name='Loading Button'>
+                <Button loading onClick={() => console.log('Should not log')}>
+                    Loading Button
+                </Button>
+            </ButtonsWrapper>
+
+            <ButtonsWrapper name='Custom className'>
+                <Button className={styles['my-custom-class']} primary>
+                    Custom Styled
+                </Button>
+            </ButtonsWrapper>
+
+            <ButtonsWrapper name='Button với Icon'>
+                <Button primary>
+                    <span>📧</span> Send Email
+                </Button>
+            </ButtonsWrapper>
+
+        </div>
+    )
 }
 
-export default Button;
+export default Buttons;

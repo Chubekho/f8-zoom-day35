@@ -28,7 +28,7 @@ select {
   margin-bottom: 10px;
 }
 
-button {
+.btn {
   padding: 8px 16px;
   border: none;
   background: #1f78ff;
@@ -38,6 +38,6 @@ button {
   transition: background 0.2s;
 }
 
-button:hover {
+.btn:hover {
   background: #145ecc;
 }
