@@ -62,7 +62,6 @@ function CommentList({ comment }) {
     );
 }
 
-
 let uniqId = 5;
 function Comments() {
     const [comments, setComments] = useState([]);
